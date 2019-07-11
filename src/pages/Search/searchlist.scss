@@ -1,0 +1,38 @@
+@mixin ellipsis($num) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+}
+.my-list {
+  margin-bottom: 5px;
+  display: flex;
+  .left {
+    flex: 1 1 auto;
+    .top {
+      padding: 5px 0;
+      font-size: 14px;
+      @include ellipsis(1);
+    }
+    .bottom {
+      font-size: 12px;
+      margin: 5px 0;
+      color: #888;
+      @include ellipsis(1);
+      .blue {
+        color: #507daf;
+      }
+    }
+  }
+  .right {
+    min-width: 60px;
+    flex-basis: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .icon {
+      font-size: 30px;
+    }
+  }
+}

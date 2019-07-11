@@ -1,0 +1,35 @@
+.searchinput {
+  flex: auto;
+  height: 100%;
+  position: relative;
+  .icon {
+    position: absolute;
+    color: #ddd;
+
+    font-size: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .left {
+    left: 10px;
+  }
+  .close {
+    right: 10px;
+  }
+  input {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    display: block;
+    padding: 5px 30px;
+    background-color: rgba(221, 221, 221, 0.37);
+    // border-radius: 15px;
+    // padding: 0 30px;
+    // color: #ddd;
+  }
+}
+.Search {
+  background-color: #fcfcfd;
+}

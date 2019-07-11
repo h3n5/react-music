@@ -1,0 +1,40 @@
+.display {
+  background: rgba(0, 0, 0, 0.7);
+  .top {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 15px 10px;
+    .img {
+      flex: 0 0 100px;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .message {
+      padding: 10px;
+      flex: 1;
+      .name {
+        color: #fff;
+      }
+      .avata {
+        height: 40px;
+        img {
+          height: 20px;
+          width: 20px;
+          border-radius: 20px;
+          vertical-align: middle;
+        }
+        span {
+          font-size: 14px;
+          display: inline-block;
+          height: 100%;
+          line-height: 40px;
+          padding-left: 5px;
+          color: #fff;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

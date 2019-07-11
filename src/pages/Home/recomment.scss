@@ -1,0 +1,25 @@
+@mixin ellipsis($num) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $num;
+}
+.PicBlock {
+  flex: 0 0 calc(100% / 3);
+  height: 150px;
+  .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .info {
+    font-size: 12px;
+    margin-top: 10px;
+    @include ellipsis(2);
+  }
+}

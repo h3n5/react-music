@@ -20,7 +20,11 @@ export default withRouter(
           </div>
           <ul className="songList">
             {tracks.map((item, index) => (
-              <li className="list-item" key={item.id}>
+              <li
+                className="list-item"
+                key={item.id}
+                onClick={() => this.props.history.push("/song/" + item.id)}
+              >
                 <div className="left">{index + 1}</div>
                 <div className="right vux-1px-b">
                   <p className="title">{item.name}</p>

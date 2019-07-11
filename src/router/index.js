@@ -7,18 +7,25 @@ import Ranking from "pages/Ranking"
 import My from "pages/My"
 import Songlist from "pages/Song/songlist"
 import Song from "pages/Play"
-export default function App() {
-  return (
-    <HashRouter>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/search" component={Search} />
-        <Route path="/ranking" component={Ranking} />
-        <Route path="/my" component={My} />
-        <Route path="/songlist/:id?" component={Songlist} />
-        <Route path="/song/:id?" component={Song} />
-      </Switch>
-    </HashRouter>
-  )
+import Play from "../audio/index.js"
+import MyContext from './context'
+export default class App extends React.Component {
+  render() {
+    return (
+      <MyContext.Provider value={{ music: new Play() }}>
+        <HashRouter>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/search" component={Search} />
+            <Route path="/ranking" component={Ranking} />
+            <Route path="/my" component={My} />
+            <Route path="/songlist/:id?" component={Songlist} />
+            <Route path="/song/:id?" component={Song} />
+          </Switch>
+        </HashRouter>
+      </MyContext.Provider>
+    )
+  }
 }
+App.contextType = MyContext

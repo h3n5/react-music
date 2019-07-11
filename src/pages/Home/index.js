@@ -1,5 +1,4 @@
 import React from "react"
-
 const Recomment = lazy(() => import("./recomment"))
 const Tabs = lazy(() => import("./tabs"))
 const Func = lazy(() => import("./func"))
@@ -15,6 +14,7 @@ export default class Home extends React.Component {
     )
   }
 }
+
 function lazy(fn) {
   return class Lazy extends React.Component {
     constructor() {

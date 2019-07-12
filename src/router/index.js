@@ -8,7 +8,8 @@ import My from "pages/My"
 import Songlist from "pages/Song/songlist"
 import Song from "pages/Play"
 import Play from "../audio/index.js"
-import MyContext from './context'
+import MyContext from "./context"
+import History from "pages/History"
 export default class App extends React.Component {
   render() {
     return (
@@ -22,6 +23,7 @@ export default class App extends React.Component {
             <Route path="/my" component={My} />
             <Route path="/songlist/:id?" component={Songlist} />
             <Route path="/song/:id?" component={Song} />
+            <Route path="/history/:uid" component={History} />
           </Switch>
         </HashRouter>
       </MyContext.Provider>

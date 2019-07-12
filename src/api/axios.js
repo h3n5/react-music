@@ -1,6 +1,6 @@
-import axios from 'axios'
+import axios from "axios"
 class HttpRequest {
-  constructor(baseUrl = '') {
+  constructor(baseUrl = "") {
     this.baseUrl = baseUrl
     this.queue = {}
   }

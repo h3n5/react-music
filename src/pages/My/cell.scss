@@ -1,0 +1,39 @@
+.pr {
+  padding-right: 30px;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row nowrap;
+  color: #333;
+  .itemTitle {
+    padding: 10px;
+    font-size: 12px;
+    color: #333;
+  }
+  .icon {
+    width: 43px;
+    height: 43px;
+  }
+  .itemNum-icon {
+    vertical-align: middle;
+  }
+  .word {
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+  .mbox {
+    .itemName {
+      padding-left: 10px;
+      flex: 4;
+      font-size: 14px;
+    }
+    .itemNum {
+      padding-left: 10px;
+      flex: 4;
+      font-size: 14px;
+    }
+  }
+
+  .pm {
+    padding-bottom: 0;
+  }
+}

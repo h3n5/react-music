@@ -9,7 +9,7 @@ export default withRouter(
         <div className="header">
           <div
             className="header__left"
-            onClick={() => this.props.history.push("/")}
+            onClick={() => this.props.history.goBack()}
           >
             {this.props.location.pathname === "/" ? (
               <svg className="icon" aria-hidden="true">
